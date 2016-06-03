@@ -2,10 +2,10 @@ require 'fluent/input'
 require 'em-websocket'
 
 module Fluent
-  class InWebsocket < Input
+  class WebsocketInput < Input
     # First, register the plugin. NAME is the name of this plugin
     # and identifies the plugin in the configuration file.
-    Fluent::Plugin.register_input('in_websocket', self)
+    Plugin.register_input('websocket', self)
 
     # config_param defines a parameter. You can refer a parameter via @port instance variable
     # :default means this parameter is optional
