@@ -3,19 +3,20 @@ lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
-  spec.name          = "fluent_plugin_in_websocket"
+  spec.name          = "fluent-plugin-in-websocket"
   spec.version       = "0.1.0"
   spec.authors       = ["Sebastian Szewczyk"]
   spec.email         = ["sebryu@gmail.com"]
 
-  spec.summary       = %q{Fluent plugin for websocket input}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = "Fluent plugin for websocket input"
+  spec.description   = "Fluent plugin that uses em-websocket as input, not tested yet"
+  spec.homepage      = "https://github.com/sebryu/fluent_plugin_in_websocket"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or
   # delete this section to allow pushing this gem to any host.
   if spec.respond_to?(:metadata)
-    spec.metadata['allowed_push_host'] = "TODO: Set to 'http://mygemserver.com'"
+    spec.metadata['allowed_push_host'] = "https://rubygems.org"
   else
     raise "RubyGems 2.0 or newer is required to protect against public gem pushes."
   end
@@ -27,6 +28,6 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "bundler", "~> 1.10"
   spec.add_development_dependency "rake", "~> 10.0"
-  spec.add_dependency "fluentd", "~> 0.12.19"
-  spec.add_dependency "em-websocket"
+  spec.add_runtime_dependency "fluentd", [">= 0.11.0", "< 2"]
+  spec.add_runtime_dependency "em-websocket", "~> 0.5.1"
 end
