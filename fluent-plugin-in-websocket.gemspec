@@ -4,12 +4,12 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
   spec.name          = "fluent-plugin-in-websocket"
-  spec.version       = "0.1.0"
+  spec.version       = "0.1.2"
   spec.authors       = ["Sebastian Szewczyk"]
   spec.email         = ["sebryu@gmail.com"]
 
   spec.summary       = "Fluent plugin for websocket input"
-  spec.description   = "Fluent plugin that uses em-websocket as input, not tested yet"
+  spec.description   = "Fluent plugin that uses em-websocket as input. Don't have tests yet, but it works for me. For more info visit homepage https://github.com/sebryu/fluent_plugin_in_websocket."
   spec.homepage      = "https://github.com/sebryu/fluent_plugin_in_websocket"
   spec.license       = "MIT"
 
